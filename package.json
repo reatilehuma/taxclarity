@@ -22,11 +22,7 @@
     "release:check": "npm run release:check -w apps/web"
   },
   "devDependencies": {
-    "@playwright/test": "^1.65.1",
     "@types/node": "^24.19.2",
-    "axe-core": "^4.11.0",
-    "lighthouse": "^13.6.0",
-    "oxlint": "^1.94.0",
-    "playwright": "^1.65.1"
+    "oxlint": "^1.94.0"
   }
 }
