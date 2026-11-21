@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "jsx-a11y", "react-hooks", "oxc"],
+  "categories": { "correctness": "error" },
+  "env": { "browser": true, "es2022": true, "node": true },
+  "ignorePatterns": ["**/dist/**", "**/dist-*/**", "**/node_modules/**", "**/coverage/**", "**/test-results/**", "**/playwright-report/**"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "jsx-a11y/no-autofocus": "error",
+    "jsx-a11y/prefer-tag-over-role": "off"
+  }
+}

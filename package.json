@@ -1,0 +1,32 @@
+{
+  "name": "taxclarity",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "preview": "npm run preview -w apps/web",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "oxlint -c .oxlintrc.json apps packages",
+    "e2e": "npm run e2e -w apps/web",
+    "e2e:install": "playwright install chromium",
+    "ci": "npm run lint && npm run typecheck && npm test && npm run build && npm run bundle:check -w apps/web && npm run e2e && npm run release:check",
+    "lighthouse": "npm run lighthouse -w apps/web",
+    "links:check": "npm run links:check -w apps/web",
+    "assistant:smoke": "npm run smoke -w packages/assistant-proxy",
+    "release:check": "npm run release:check -w apps/web"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^24.19.2",
+    "axe-core": "^4.11.0",
+    "lighthouse": "^13.6.0",
+    "oxlint": "^1.94.0",
+    "playwright": "^1.65.1"
+  }
+}

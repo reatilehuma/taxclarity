@@ -1,0 +1,26 @@
+{
+  "name": "@taxclarity/assistant-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "coverage": "vitest run --coverage",
+    "smoke": "node --experimental-strip-types scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.10.0",
+    "@taxclarity/assistant": "^0.1.0",
+    "@taxclarity/tax-engine": "^0.1.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.1.1",
+    "fast-check": "^4.10.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}

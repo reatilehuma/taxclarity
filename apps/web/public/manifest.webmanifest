@@ -1,0 +1,12 @@
+{
+  "name": "ClearTax SA",
+  "short_name": "ClearTax",
+  "description": "A plain-language PAYE and take-home pay calculator for salaried South Africans. Works offline and keeps your numbers on your device.",
+  "lang": "en-ZA",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f8f7",
+  "theme_color": "#12584f",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

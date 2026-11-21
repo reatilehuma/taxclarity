@@ -1,0 +1,63 @@
+I want to build a **South African Tax Calculator Web App for salaried employees**, covering the **2026/2027 tax year (1 March 2026 – 28 February 2027)**, using the latest applicable South African Revenue Service (SARS) tax regulations.
+
+The problem is that millions of salaried South Africans don't fully understand how much tax they should be paying, how PAYE is calculated, whether their employer is deducting the correct amount, or how they can legally reduce their tax liability. Existing tax calculators can be confusing and often ask for gross annual salary, taxable income, and deductions that ordinary employees don't fully understand. Most people simply know how much money lands in their bank account every month. **Start from there.**
+
+The app should feel extremely simple. Build a step-by-step wizard that asks one question at a time, using plain, non-financial language that even a 21-year-old South African starting their first job can understand. Ask questions like "How much money do you receive in your bank account every month?", "Does your employer deduct money for a pension fund?", "Do you belong to a medical aid?", and "Do you receive a bonus?" rather than asking users to enter Section 11F deductions or medical scheme tax credits.
+
+Allow users to start with either their **monthly take-home salary or gross salary**. Since take-home salary alone is insufficient to determine exact taxable income, the app must estimate gross salary using clearly stated assumptions and request additional information where necessary. It must distinguish estimates from more accurate payslip-based calculations.
+
+If someone gets stuck on a question, there should be a small FAQ section at the bottom of that step explaining common questions in simple language. Include a small progress bar or progress dots so users know how far along they are.
+
+On the right side of the wizard, show a **detailed live tax preview dashboard** that updates as users answer questions. It should display estimated gross salary, taxable income, PAYE, UIF, retirement contributions, medical aid tax credits, applicable deductions, tax rebates, and monthly take-home salary. Include a detailed SARS income tax bracket table showing how tax is calculated at each bracket. On mobile, make the preview responsive and easily accessible.
+
+The landing page should be beautifully designed, not a blank white page with a form. It should feel like a polished, trustworthy South African fintech product. Use a full-page layout with a compelling headline such as **"Understand Your Salary. Pay the Right Tax. Keep More of Your Money."** Include a preview of the final tax calculation dashboard so users feel confident before starting.
+
+At the end, show a clear, human-readable result, such as **"Your estimated monthly PAYE is R4,250, and your take-home salary is R25,750."** These figures are illustrative only. Show a complete gross-to-net salary breakdown, a SARS tax bracket-by-bracket calculation, annual and monthly tax estimates, and a comparison between the PAYE their employer currently deducts and the PAYE calculated by the app. Explain that differences do not automatically mean their employer made an error or that they qualify for a SARS refund.
+
+Include a **personalised tax education section** explaining how each input affected their tax liability. For example, explain how retirement annuity contributions reduce taxable income, how medical aid tax credits work, and how age-related tax rebates affect the final calculation.
+
+Also provide **practical, personalised tax-saving recommendations** based on the user's circumstances, such as increasing qualifying retirement contributions, claiming applicable medical tax credits, making qualifying Section 18A donations, or understanding the benefits of tax-free investments. Show potential tax savings in rands wherever they can be calculated reliably. Never promise tax savings that cannot be supported by the user's information.
+
+I also want an **optional AI-powered tax assistant** that explains tax calculations and answers common South African tax questions in simple language. However, all actual tax calculations must be performed by a deterministic, thoroughly tested calculation engine, not by the AI. The AI should only explain calculations and provide educational guidance. Any external AI integration must require explicit consent before sharing financial information.
+
+The design should be clean, modern, minimal, responsive, and uncluttered. It should feel professional and trustworthy. Make the application **privacy-first**, with tax calculations running entirely in the user's browser, no mandatory accounts, no storage of financial information on external servers, and no requirement to provide ID numbers or SARS tax reference numbers.
+
+For the tax logic, **thoroughly research the official SARS rules for the 2026/2027 tax year**. Include:
+
+- All applicable individual income tax brackets and marginal rates.
+- Primary, secondary, and tertiary tax rebates.
+- Age-based income tax thresholds for people under 65, aged 65–74, and aged 75 and older.
+- PAYE calculation methods.
+- UIF employee contribution rates and remuneration ceilings.
+- Pension, provident fund, and retirement annuity deductions under Section 11F.
+- Medical Scheme Fees Tax Credits under Section 6A.
+- Additional Medical Expenses Tax Credits under Section 6B.
+- Qualifying Section 18A donations.
+- Local interest income exemptions.
+- Tax-free investment treatment.
+- Bonuses, 13th cheques, overtime, and commission.
+- Travel allowances and taxable employment fringe benefits.
+- Employer contributions to retirement funds and medical schemes.
+- Relevant deduction limits, exemptions, rounding rules, and calculation formulas.
+
+Research and handle important edge cases, including zero income, income below the tax threshold, salaries falling exactly on tax bracket boundaries, employees over 65 and 75, multiple employers, bonuses, variable monthly earnings, retirement contributions exceeding allowable limits, medical aid dependants, and incomplete payslip information.
+
+Make sure the tax calculations are as accurate as practically possible, using official SARS sources and automated tests. **Do not invent tax rates, deduction limits, or formulas.** Where information cannot be verified, explicitly identify the uncertainty. The app should support versioned tax rules so future SARS tax-year updates can be implemented easily.
+
+Keep the first version focused on **salaried South African employees**. Do not attempt to build a complete tax filing platform. Exclude complex capital gains tax, corporate tax, VAT, freelance income, rental income, cryptocurrency taxation, provisional tax, and international tax residency calculations. Clearly flag situations where excluded income could affect the user's final tax liability.
+
+No PDF exports or downloadable reports are needed.
+
+Recommend an appropriate technology stack, preferably using **React, TypeScript, Tailwind CSS, and a modular tax calculation engine**, with a strong emphasis on maintainability, performance, accessibility, and testing.
+
+**Your task is to research everything necessary about South African personal income tax for the 2026/2027 tax year and then write a complete, detailed Product Requirements Document (PRD) in Markdown format.**
+
+The PRD must document every screen, user interaction, wizard step, input field, validation rule, calculation formula, tax bracket, deduction, rebate, edge case, UI component, data model, technical requirement, and acceptance criterion.
+
+Structure the PRD into clear development phases, from tax research and calculation engine development to frontend implementation, AI assistant integration, testing, and deployment. Each phase should include specific deliverables and acceptance criteria.
+
+Include links to authoritative SARS sources and identify the effective dates of all tax rules.
+
+The final PRD must be detailed enough that **Claude Code, Cursor, or another AI coding agent can use it to build the entire application from scratch without making assumptions about missing requirements**.
+
+**Do not write any application code yet. First produce the complete, research-backed PRD as a Markdown file named `south-african-tax-calculator-prd.md`.**

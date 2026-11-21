@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+*.log
+.vite/
+
+# test output
+test-results/
+playwright-report/
+coverage/
+lighthouse-report/
+dist-remote/
+dist-years/
