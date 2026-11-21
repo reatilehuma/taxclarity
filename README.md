@@ -26,6 +26,56 @@ All figures are **estimates**. This is not tax advice.
   remote model is opt-in (see [docs/DEPLOY.md](docs/DEPLOY.md)).
 - **Accessible and responsive:** keyboard and screen-reader support, checked with axe and Lighthouse.
 
+## Screenshots
+
+A walkthrough of the app, from landing page to PDF. All figures are illustrative examples.
+
+### Landing page
+
+![Landing page](docs/screenshots/01-landing.png)
+
+The landing page shows the headline, an example take-home card, and two ways to start: from your bank amount or from
+your salary.
+
+### Your results
+
+![Results summary](docs/screenshots/02-results-summary.png)
+
+The results page opens with a plain-language headline: estimated monthly PAYE, take-home pay, tax for the year, and
+an estimate of what you may get back when you file.
+
+![From salary to bank account](docs/screenshots/03-gross-to-net.png)
+
+The gross-to-net table walks from gross salary, through medical aid, PAYE and UIF, down to the amount that lands in
+your bank account, for a normal month and for the whole year.
+
+![How taxable income is worked out](docs/screenshots/04-taxable-income.png)
+
+Taxable income is shown step by step: gross salary plus bonus, less your retirement deduction.
+
+![Bracket by bracket](docs/screenshots/05-bracket-breakdown.png)
+
+The bracket walk shows how much of your income falls in each SARS bracket, the tax on each slice, and which bracket
+is your top one.
+
+### Ask the assistant
+
+![Assistant panel](docs/screenshots/06-assistant.png)
+
+The optional assistant explains your results in plain language (here, "Why is my PAYE what it is?"). It only explains;
+every number comes from the calculator.
+
+### PDF summary
+
+![PDF summary, income and deductions](docs/screenshots/07-pdf-summary-income.png)
+
+The downloadable PDF starts with the calculation details, your income, and your deductions, ending at taxable income.
+
+![PDF summary, tax calculation](docs/screenshots/08-pdf-summary-tax.png)
+
+The second part of the PDF covers the tax calculation (rebates and medical credit), the salary-to-bank breakdown, and
+items paid by debit order rather than through your payslip.
+
 ## Privacy
 
 - Every calculation runs in the browser. No account, no database.
